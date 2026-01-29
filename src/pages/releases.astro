@@ -45,12 +45,13 @@ function normalizeSoundcloudUrl(sc: string | undefined) {
   return looksEncoded ? decodeURIComponent(sc) : sc;
 }
 
-type LinkKey = "spotify" | "soundcloud" | "youtube" | "beatport";
+type LinkKey = "spotify" | "soundcloud" | "youtube" | "beatport" | "freeDownload";
 const platformLinks: { key: LinkKey; icon: string; alt: string }[] = [
   { key: "spotify", icon: "/images/icons/spotify.svg", alt: "Spotify" },
   { key: "soundcloud", icon: "/images/icons/soundcloud.svg", alt: "SoundCloud" },
   { key: "youtube", icon: "/images/icons/youtube.svg", alt: "YouTube" },
   { key: "beatport", icon: "/images/icons/beatport.svg", alt: "Beatport" },
+  { key: "freeDownload", icon: "/images/icons/download.svg", alt: "Free Download" },
 ];
 ---
 
