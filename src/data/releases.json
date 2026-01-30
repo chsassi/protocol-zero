@@ -5,19 +5,19 @@
     "title": "RE:SET",
     "artist": "Various Artists",
     "fullArtists": "The Martens, Chr-s, LED., The Sun Vanished",
-    "date": "January 2026",
+    "date": "30/01/2026",
     "image": "/images/releases/reset.png",
     "video": "/videos/reset.mp4",
     "description": "Coming Soon",
     "links": {
       "spotify": "https://open.spotify.com/playlist/79xxn9IepLlyeuaVjHfEjo",
       "soundcloud": "https://on.soundcloud.com/53YZc7Rc0MfHHWvcDl",
-      "youtube": "",
+      "youtube": "https://www.youtube.com/embed/BO40S5IYjjc?list=RDJqK7zKY9wGE",
       "beatport": "",
       "freeDownload": ""
     },
     "spotifyEmbed": "spotify:playlist:79xxn9IepLlyeuaVjHfEjo",
     "soundcloudEmbed": "https://soundcloud.com/themartens/sets/ambush-ep-drumatch-records?si=8ccf788f02c348e5b33dc83b725586de&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
-    "youtubeEmbed": ""
+    "youtubeEmbed": "https://www.youtube.com/embed/BO40S5IYjjc?list=RDJqK7zKY9wGE"
   }
 ]
