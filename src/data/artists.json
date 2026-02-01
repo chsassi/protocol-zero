@@ -11,7 +11,7 @@
       "spotify": "https://open.spotify.com/artist/6XyHfiefInkIBJWq72X7Wr?si=nj232mOtRSCN1p2Ac8PFdQ",
       "soundcloud": "https://soundcloud.com/themartens"
     },
-    "trackEmbed": "https://soundcloud.com/themartens/resurgence"
+    "trackEmbed": "https://on.soundcloud.com/bKAm6adVRH1DLGX5WO"
   },
   {
     "slug": "chris",
@@ -21,11 +21,11 @@
     "flags": ["/images/flags/it.svg", "/images/flags/sk.svg"],
     "description": "Founder of Protocol Zero.\n\nChr-s is an Italo-Slovak producer based in Florence, shaped by a mix of cultures and thousands of hours spent listening to drum & bass long before releasing his first tracks.\n\nStill at the beginning of his artistic path, Chr-s approaches production with the mindset of someone who has studied the genre for years: deep familiarity with its evolution, its layers, and its emotional potential.\n\nHis music reflects this background — introspective, technical, and influenced by both Eastern European electronic grit and the cinematic aesthetics of his environment.\n\nFor Chr-s, neurofunk is not just a genre but a language he has absorbed over time and is now starting to express through his own voice.",
     "links": {
-      "instagram": "https://www.instagram.com/christian.sassi",
+      "instagram": "https://www.instagram.com/chrsdnb",
       "spotify": "https://open.spotify.com/playlist/79xxn9IepLlyeuaVjHfEjo?si=57fe01b851104a9b",
-      "soundcloud": "https://soundcloud.com/9xsounds"
+      "soundcloud": "https://soundcloud.com/chr-s_dnb"
     },
-    "trackEmbed": ""
+    "trackEmbed": "https://on.soundcloud.com/aFJMJCrQQ713y8quCg"
   },
   {
     "slug": "led",
@@ -39,7 +39,7 @@
       "spotify": "https://open.spotify.com/artist/72Le5s6ozfGrjIK3XvUTjH?si=I1jC-GqjRqeKi4LIBDLakg",
       "soundcloud": "https://soundcloud.com/led-dnb"
     },
-    "trackEmbed": "https://soundcloud.com/led-dnb/led-serenade"
+    "trackEmbed": "https://on.soundcloud.com/x7ZgZBB16NmPTtonds"
   },
   {
     "slug": "tsv",
@@ -53,6 +53,6 @@
       "spotify": "https://open.spotify.com/artist/2TJoUCSspsWRXC15NTstaw?si=1HMmjiEURbOrGP9BM5r0yg",
       "soundcloud": "https://soundcloud.com/thesunvanished"
     },
-    "trackEmbed": "https://soundcloud.com/thesunvanished/03-the-sun-vanished-darkness-3"
+    "trackEmbed": "https://on.soundcloud.com/l1TZRcVrshfjlqel1g"
   }
 ]
