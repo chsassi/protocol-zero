@@ -10,6 +10,7 @@ export const GET: APIRoute = async () => {
     "/artists",
     "/contacts",
     "/releases",
+    "/mixes",
     "/shop",
   ];
 

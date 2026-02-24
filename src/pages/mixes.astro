@@ -1,0 +1,168 @@
+---
+import PageLayout from "../layouts/PageLayout.astro";
+import Collapsible from "../components/ui/Collapsible.astro";
+import mixes from "../data/mixes.json";
+
+function normalizeSoundcloudUrl(sc: string | undefined) {
+  if (!sc || typeof sc !== "string") return null;
+
+  const looksEncoded = sc.includes("%3A") || sc.includes("%2F");
+  return looksEncoded ? decodeURIComponent(sc) : sc;
+}
+
+type LinkKey = "soundcloud" | "youtube";
+const platformLinks: { key: LinkKey; icon: string; alt: string }[] = [
+  { key: "soundcloud", icon: "/images/icons/soundcloud.svg", alt: "SoundCloud" },
+  { key: "youtube", icon: "/images/icons/youtube.svg", alt: "YouTube" },
+];
+---
+
+<PageLayout title="Mixes" active="mixes">
+  <section class="releases-page">
+    <h1>MIXES</h1>
+    <div class="release-list" data-collapsible-group>
+      {mixes.map((mix) => {
+        const imgSrc = mix.image?.startsWith("/") ? mix.image : "/" + (mix.image || "");
+        const scRaw = normalizeSoundcloudUrl(mix.soundcloudEmbed);
+        const soundcloudSrc = scRaw
+          ? `https://w.soundcloud.com/player/?url=${encodeURIComponent(scRaw)}&color=%23101416&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true`
+          : null;
+
+        return (
+          <Collapsible id={mix.slug} class="release-collapsible">
+            <Fragment slot="trigger">
+              <div class="release-index">{mix.catalogNumber}</div>
+              <img class="release-thumb" src={imgSrc} alt={`${mix.title} cover`} loading="lazy" decoding="async" />
+              <div class="release-row-info">
+                <div class="release-row-title">{mix.title}</div>
+                <div class="release-row-artist">{mix.artist}</div>
+              </div>
+              <div class="release-row-date">{mix.date}</div>
+            </Fragment>
+
+            <div class="release-expanded-content">
+              {mix.video && (
+                <div class="release-expanded-bg">
+                  <video autoplay muted loop playsinline class="release-expanded-video">
+                    <source src={mix.video} type="video/mp4" />
+                  </video>
+                </div>
+              )}
+              <div class="release-expanded-grid">
+                <div class="release-expanded-left">
+                  <h2 class="release-expanded-title">{mix.title}</h2>
+                  <div class="release-expanded-artists">
+                    {(mix.fullArtists || mix.artist).split(',').map((artist: string) => (
+                      <span class="release-expanded-artist">{artist.trim()}</span>
+                    ))}
+                  </div>
+                  {mix.links && Object.values(mix.links).some((v) => v) && (
+                    <div class="release-expanded-icons">
+                      {platformLinks.map(({ key, icon, alt }) =>
+                        mix.links[key] ? (
+                          <a href={mix.links[key]} target="_blank" rel="noopener noreferrer">
+                            <img src={icon} alt={alt} />
+                          </a>
+                        ) : null
+                      )}
+                    </div>
+                  )}
+                </div>
+
+                <div class="release-expanded-right">
+                  {soundcloudSrc && (
+                    <div class="release-expanded-player release-expanded-player--soundcloud">
+                      <iframe
+                        width="100%"
+                        height="300"
+                        scrolling="no"
+                        frameborder="no"
+                        allow="autoplay"
+                        src={soundcloudSrc}>
+                      </iframe>
+                    </div>
+                  )}
+
+                  {mix.youtubeEmbed && (
+                    <div class="release-expanded-player release-expanded-player--youtube">
+                      <iframe
+                        src={mix.youtubeEmbed}
+                        width="100%"
+                        height="315"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen
+                        loading="lazy">
+                      </iframe>
+                    </div>
+                  )}
+                </div>
+              </div>
+            </div>
+          </Collapsible>
+        );
+      })}
+    </div>
+  </section>
+</PageLayout>
+
+<script>
+  const collapsibles = document.querySelectorAll('[data-collapsible]');
+
+  function closeOthers(current: Element) {
+    const group = current.closest('[data-collapsible-group]');
+    if (group) {
+      const siblings = group.querySelectorAll('[data-collapsible]');
+      siblings.forEach((sibling) => {
+        if (sibling !== current && sibling.classList.contains('is-open')) {
+          sibling.classList.remove('is-open');
+          const trigger = sibling.querySelector('[data-collapsible-trigger]');
+          trigger?.setAttribute('aria-expanded', 'false');
+        }
+      });
+    }
+  }
+
+  function toggle(collapsible: Element) {
+    const trigger = collapsible.querySelector('[data-collapsible-trigger]');
+    const isOpen = collapsible.classList.contains('is-open');
+
+    if (!isOpen) {
+      closeOthers(collapsible);
+    }
+
+    collapsible.classList.toggle('is-open');
+    trigger?.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
+  }
+
+  collapsibles.forEach((collapsible) => {
+    const trigger = collapsible.querySelector('[data-collapsible-trigger]');
+
+    trigger?.addEventListener('click', (e) => {
+      e.preventDefault();
+      toggle(collapsible);
+    });
+
+    trigger?.addEventListener('keydown', (e) => {
+      const event = e as KeyboardEvent;
+      if (event.key === 'Enter' || event.key === ' ') {
+        e.preventDefault();
+        toggle(collapsible);
+      }
+    });
+  });
+
+  function openFromHash() {
+    const hash = window.location.hash.slice(1);
+    if (hash) {
+      const target = document.querySelector(`[data-collapsible]#${hash}`) as Element | null;
+      if (target && !target.classList.contains('is-open')) {
+        toggle(target);
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+  }
+
+  openFromHash();
+  window.addEventListener('hashchange', openFromHash);
+</script>
