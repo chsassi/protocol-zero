@@ -18,6 +18,32 @@ const platformLinks: { key: LinkKey; icon: string; alt: string }[] = [
 ---
 
 <PageLayout title="Mixes" active="mixes">
+  <div class="center-page">
+    <h1 class="coming-soon">COMING SOON</h1>
+  </div>
+
+  <!--
+    MIXES PAGE STRUCTURE (Commented for future use)
+
+    Once mixes data is added to /src/data/mixes.json, uncomment this section.
+    The mixes.json structure should follow:
+    {
+      "catalogNumber": "MX001",
+      "slug": "mix-name",
+      "title": "Mix Title",
+      "artist": "Artist Name",
+      "fullArtists": "Artist 1, Artist 2",
+      "date": "DD/MM/YYYY",
+      "image": "/images/mixes/cover.jpg",
+      "video": "/videos/mix.mp4",
+      "links": {
+        "soundcloud": "https://soundcloud.com/...",
+        "youtube": "https://youtube.com/..."
+      },
+      "soundcloudEmbed": "https://soundcloud.com/...",
+      "youtubeEmbed": "https://www.youtube.com/embed/..."
+    }
+
   <section class="releases-page">
     <h1>MIXES</h1>
     <div class="release-list" data-collapsible-group>
@@ -104,65 +130,71 @@ const platformLinks: { key: LinkKey; icon: string; alt: string }[] = [
       })}
     </div>
   </section>
+  -->
 </PageLayout>
 
-<script>
-  const collapsibles = document.querySelectorAll('[data-collapsible]');
+<!--
+  COLLAPSIBLE TOGGLE SCRIPT (Commented for future use)
+  Uncomment when mixes are ready to be displayed.
 
-  function closeOthers(current: Element) {
-    const group = current.closest('[data-collapsible-group]');
-    if (group) {
-      const siblings = group.querySelectorAll('[data-collapsible]');
-      siblings.forEach((sibling) => {
-        if (sibling !== current && sibling.classList.contains('is-open')) {
-          sibling.classList.remove('is-open');
-          const trigger = sibling.querySelector('[data-collapsible-trigger]');
-          trigger?.setAttribute('aria-expanded', 'false');
-        }
-      });
-    }
-  }
+  <script>
+    const collapsibles = document.querySelectorAll('[data-collapsible]');
 
-  function toggle(collapsible: Element) {
-    const trigger = collapsible.querySelector('[data-collapsible-trigger]');
-    const isOpen = collapsible.classList.contains('is-open');
-
-    if (!isOpen) {
-      closeOthers(collapsible);
+    function closeOthers(current: Element) {
+      const group = current.closest('[data-collapsible-group]');
+      if (group) {
+        const siblings = group.querySelectorAll('[data-collapsible]');
+        siblings.forEach((sibling) => {
+          if (sibling !== current && sibling.classList.contains('is-open')) {
+            sibling.classList.remove('is-open');
+            const trigger = sibling.querySelector('[data-collapsible-trigger]');
+            trigger?.setAttribute('aria-expanded', 'false');
+          }
+        });
+      }
     }
 
-    collapsible.classList.toggle('is-open');
-    trigger?.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
-  }
+    function toggle(collapsible: Element) {
+      const trigger = collapsible.querySelector('[data-collapsible-trigger]');
+      const isOpen = collapsible.classList.contains('is-open');
 
-  collapsibles.forEach((collapsible) => {
-    const trigger = collapsible.querySelector('[data-collapsible-trigger]');
+      if (!isOpen) {
+        closeOthers(collapsible);
+      }
 
-    trigger?.addEventListener('click', (e) => {
-      e.preventDefault();
-      toggle(collapsible);
-    });
+      collapsible.classList.toggle('is-open');
+      trigger?.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
+    }
 
-    trigger?.addEventListener('keydown', (e) => {
-      const event = e as KeyboardEvent;
-      if (event.key === 'Enter' || event.key === ' ') {
+    collapsibles.forEach((collapsible) => {
+      const trigger = collapsible.querySelector('[data-collapsible-trigger]');
+
+      trigger?.addEventListener('click', (e) => {
         e.preventDefault();
         toggle(collapsible);
-      }
-    });
-  });
+      });
 
-  function openFromHash() {
-    const hash = window.location.hash.slice(1);
-    if (hash) {
-      const target = document.querySelector(`[data-collapsible]#${hash}`) as Element | null;
-      if (target && !target.classList.contains('is-open')) {
-        toggle(target);
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      trigger?.addEventListener('keydown', (e) => {
+        const event = e as KeyboardEvent;
+        if (event.key === 'Enter' || event.key === ' ') {
+          e.preventDefault();
+          toggle(collapsible);
+        }
+      });
+    });
+
+    function openFromHash() {
+      const hash = window.location.hash.slice(1);
+      if (hash) {
+        const target = document.querySelector(`[data-collapsible]#${hash}`) as Element | null;
+        if (target && !target.classList.contains('is-open')) {
+          toggle(target);
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
       }
     }
-  }
 
-  openFromHash();
-  window.addEventListener('hashchange', openFromHash);
-</script>
+    openFromHash();
+    window.addEventListener('hashchange', openFromHash);
+  </script>
+-->
