@@ -1,6 +1,16 @@
 [
     {
     "id": 1,
+    "type": "release",
+    "title": "NEW RELEASE",
+    "heading": "VENGEANCE",
+    "description": "Fresh from the Protocol Zero kitchen",
+    "video": "/videos/vengeance.mp4",
+    "link": "/releases",
+    "linkText": "EXPLORE RELEASES"
+  },
+  {
+    "id": 2,
     "type": "artist",
     "title": "NEW ARTIST",
     "heading": "The Sun Vanished",
@@ -8,16 +18,6 @@
     "image": "/images/artists/tsv.jpg",
     "link": "/#artists",
     "linkText": "BROWSE ARTISTS"
-  },
-  {
-    "id": 2,
-    "type": "release",
-    "title": "NEW RELEASE",
-    "heading": "RE:SET",
-    "description": "Fresh from the Protocol Zero kitchen",
-    "video": "/videos/reset.mp4",
-    "link": "/releases",
-    "linkText": "EXPLORE RELEASES"
   },
   {
     "id": 3,
