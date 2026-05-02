@@ -30,12 +30,12 @@
     "video": "/videos/vengeance.mp4",
     "description": "Coming Soon",
     "links": {
-      "spotify": "",
+      "spotify": "https://open.spotify.com/track/1y9lfwuAtuE6vWUpQqFiZp?si=7e80832c17af4d94",
       "soundcloud": "https://soundcloud.com/protocolzeromusic/razerbeam-vengeance",
       "youtube": "https://www.youtube.com/watch?v=ja_1Ps57rOs",
       "freeDownload": ""
     },
-    "spotifyEmbed": "",
+    "spotifyEmbed": "spotify:track:1y9lfwuAtuE6vWUpQqFiZp",
     "soundcloudEmbed": "https://soundcloud.com/protocolzeromusic/razerbeam-vengeance",
     "youtubeEmbed": "https://www.youtube.com/embed/ja_1Ps57rOs"
   }
