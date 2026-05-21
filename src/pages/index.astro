@@ -2,6 +2,7 @@
 import HeaderLayout from "../layouts/HeaderLayout.astro";
 import FooterLayout from "../layouts/FooterLayout.astro";
 import ContentSlideshow from "../components/ContentSlideshow.astro";
+import CookieConsent from "../components/ui/CookieConsent.astro";
 import artists from "../data/artists.json";
 import releases from "../data/releases.json";
 import news from "../data/news.json";
@@ -108,7 +109,11 @@ import news from "../data/news.json";
     />
   </div>
 
+  <CookieConsent />
+
   <script src="/scripts/index-slideshow.min.js" is:inline></script>
+  <script src="/scripts/index-slideshow.min.js" is:inline></script>
+  <script src="/scripts/cookie-consent.min.js" is:inline></script>
 </HeaderLayout>
 
 <FooterLayout />

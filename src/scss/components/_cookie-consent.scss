@@ -1,0 +1,71 @@
+// src/scss/components/_cookie-consent.scss
+
+.cookie-consent {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+
+  z-index: 90;
+  width: min(calc(100% - 2rem), 420px);
+
+  padding: 1.25rem;
+
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(8, 10, 12, 0.94);
+  backdrop-filter: blur(12px);
+
+  color: #fff;
+
+  opacity: 0;
+  transform: translate(-50%, calc(-50% + 12px));
+
+  transition:
+    opacity 250ms ease,
+    transform 250ms ease;
+}
+
+.cookie-consent.is-visible {
+  opacity: 1;
+  transform: translate(-50%, -50%);
+}
+
+.cookie-consent__eyebrow {
+  margin: 0 0 0.35rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.cookie-consent__text {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.cookie-consent__actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.cookie-consent__button {
+  border: 1px solid #fff;
+  background: #fff;
+  color: #080a0c;
+  padding: 0.55rem 0.85rem;
+  font: inherit;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.cookie-consent__button--ghost {
+  background: transparent;
+  color: #fff;
+}
+
+@media (max-width: 640px) {
+  .cookie-consent__actions {
+    flex-direction: column;
+  }
+}
