@@ -50,12 +50,12 @@
       "video": "/videos/ew.mp4",
       "description": "Coming Soon",
       "links": {
-        "spotify": "",
+        "spotify": "https://open.spotify.com/album/3v9rkwMzRHLE4NHoArlQFH?si=nGHAtxGxQROobqT5b7VdaA",
         "soundcloud": "https://soundcloud.com/protocolzeromusic/arax-electric-whispers",
         "youtube": "https://www.youtube.com/watch?v=NnIGNMgiht4",
         "freeDownload": ""
       },
-      "spotifyEmbed": "",
+      "spotifyEmbed": "spotify:album:3v9rkwMzRHLE4NHoArlQFH?si=nGHAtxGxQROobqT5b7VdaA",
       "soundcloudEmbed": "https://soundcloud.com/protocolzeromusic/arax-electric-whispers",
       "youtubeEmbed": "https://www.youtube.com/embed/NnIGNMgiht4"
     }
