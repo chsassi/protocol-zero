@@ -38,6 +38,26 @@
     "spotifyEmbed": "spotify:track:1y9lfwuAtuE6vWUpQqFiZp",
     "soundcloudEmbed": "https://soundcloud.com/protocolzeromusic/razerbeam-vengeance",
     "youtubeEmbed": "https://www.youtube.com/embed/ja_1Ps57rOs"
-  }
+  },
+    {
+      "catalogNumber": "PZ003",
+      "slug": "electric-whispers",
+      "title": "ELECTRIC WHISPERS",
+      "artist": "Arax",
+      "fullArtists": "Arax",
+      "date": "12/06/2026",
+      "image": "/images/releases/ew.png",
+      "video": "/videos/ew.mp4",
+      "description": "Coming Soon",
+      "links": {
+        "spotify": "",
+        "soundcloud": "https://soundcloud.com/protocolzeromusic/arax-electric-whispers",
+        "youtube": "https://www.youtube.com/watch?v=NnIGNMgiht4",
+        "freeDownload": ""
+      },
+      "spotifyEmbed": "",
+      "soundcloudEmbed": "https://soundcloud.com/protocolzeromusic/arax-electric-whispers",
+      "youtubeEmbed": "https://www.youtube.com/embed/NnIGNMgiht4"
+    }
 
 ]

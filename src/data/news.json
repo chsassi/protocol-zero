@@ -3,9 +3,9 @@
     "id": 1,
     "type": "release",
     "title": "NEW RELEASE",
-    "heading": "VENGEANCE",
+    "heading": "ELECTRIC WHISPERS",
     "description": "Fresh from the Protocol Zero kitchen",
-    "video": "/videos/vengeance.mp4",
+    "video": "/videos/ew.mp4",
     "link": "/releases",
     "linkText": "EXPLORE RELEASES"
   },
@@ -13,9 +13,9 @@
     "id": 2,
     "type": "artist",
     "title": "NEW ARTIST",
-    "heading": "The Sun Vanished",
+    "heading": "Arax",
     "description": "Introducing our latest addition to the Protocol Zero family",
-    "image": "/images/artists/tsv.jpg",
+    "image": "/images/artists/arax.JPG",
     "link": "/#artists",
     "linkText": "BROWSE ARTISTS"
   },

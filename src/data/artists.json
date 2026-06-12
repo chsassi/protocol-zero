@@ -22,7 +22,7 @@
     "description": "Founder of Protocol Zero.\n\nChr-s is an Italo-Slovak producer based in Florence, shaped by a mix of cultures and thousands of hours spent listening to drum & bass long before releasing his first tracks.\n\nStill at the beginning of his artistic path, Chr-s approaches production with the mindset of someone who has studied the genre for years: deep familiarity with its evolution, its layers, and its emotional potential.\n\nHis music reflects this background — introspective, technical, and influenced by both Eastern European electronic grit and the cinematic aesthetics of his environment.\n\nFor Chr-s, neurofunk is not just a genre but a language he has absorbed over time and is now starting to express through his own voice.",
     "links": {
       "instagram": "https://www.instagram.com/chrsdnb",
-      "spotify": "https://open.spotify.com/playlist/79xxn9IepLlyeuaVjHfEjo?si=57fe01b851104a9b",
+      "spotify": "https://open.spotify.com/artist/6rThzykGVUFGEPRbJ8sgOm?si=oe2TBuJiRzCpgQEpjs1Ssg",
       "soundcloud": "https://soundcloud.com/chr-sp0"
     },
     "trackEmbed": "https://soundcloud.com/protocolzeromusic/chr-s-x-the-martens-reset-5"
@@ -68,5 +68,19 @@
       "soundcloud": "https://soundcloud.com/razerbeamdnb"
     },
     "trackEmbed": "https://soundcloud.com/protocolzeromusic/razerbeam-vengeance"
+  },
+  {
+    "slug": "arax",
+    "name": "Arax",
+    "brief": "|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||",
+    "image": "/images/artists/arax.JPG",
+    "flags": ["/images/flags/sk.svg"],
+    "description": "Arax is a 27-year-old producer and DJ originally from Púchov, Slovakia. In previous editions of the CZ/SK DNB Awards, he won two first-place awards: Breakthrough Artist of the Year and Track of the Year.\n\nIn 2025, he ranked among the top 5 producers on the CZ/SK scene. He has already performed across Slovakia and the Czech Republic at some of the best club nights and festivals, with bookings also reaching Spain, Germany, France, and Hungary. His style is defined by fast-paced mixing and heavy neurofunk double drops.",
+    "links": {
+      "instagram": "https://www.instagram.com/djarax_/",
+      "spotify": "https://open.spotify.com/artist/2CSZb5ULrgQ1iWAHshkAAq?si=000pDUsSR4mPL7j5euunbQ",
+      "soundcloud": "https://soundcloud.com/araxdnb"
+    },
+    "trackEmbed": "https://soundcloud.com/protocolzeromusic/arax-electric-whispers"
   }
 ]
