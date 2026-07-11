@@ -3,9 +3,9 @@
     "id": 1,
     "type": "release",
     "title": "NEW RELEASE",
-    "heading": "ELECTRIC WHISPERS",
+    "heading": "COMMAND",
     "description": "Fresh from the Protocol Zero kitchen",
-    "video": "/videos/ew.mp4",
+    "video": "/videos/command.mp4",
     "link": "/releases",
     "linkText": "EXPLORE RELEASES"
   },
@@ -23,9 +23,9 @@
     "id": 3,
     "type": "artist",
     "title": "NEW ARTIST",
-    "heading": "Arax",
+    "heading": "Ominate",
     "description": "Introducing our latest addition to the Protocol Zero family",
-    "image": "/images/artists/arax2.jpg",
+    "image": "/images/artists/ominate.jpg",
     "link": "/#artists",
     "linkText": "BROWSE ARTISTS"
   }

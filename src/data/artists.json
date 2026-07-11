@@ -82,5 +82,19 @@
       "soundcloud": "https://soundcloud.com/araxdnb"
     },
     "trackEmbed": "https://soundcloud.com/protocolzeromusic/arax-electric-whispers"
+  },
+  {
+    "slug": "ominate",
+    "name": "Ominate",
+    "brief": "|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||",
+    "image": "/images/artists/ominate.jpg",
+    "flags": ["/images/flags/si.svg"],
+    "description": "Slovenian neurofunk producer blending heavy basslines with years of experience in rock, metal and funk.\n\nWith releases on Neuroheadz and Bass Rabbit, his sound combines powerful production with strong musicality. Together with his brother Redline, he delivers a unique live DJ & guitar performances that brings a fresh dimension in the drum & bass community.",
+    "links": {
+      "instagram": "https://www.instagram.com/ominate_dnb/",
+      "spotify": "https://open.spotify.com/artist/6qGVAjkmOolLY5d9IJcjcY?si=ktk0VQmsQkmGqoOpS2OFbA",
+      "soundcloud": "https://soundcloud.com/ominate_dnb"
+    },
+    "trackEmbed": "https://soundcloud.com/protocolzeromusic/ominate-command"
   }
 ]

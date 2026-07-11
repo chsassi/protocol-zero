@@ -39,25 +39,44 @@
     "soundcloudEmbed": "https://soundcloud.com/protocolzeromusic/razerbeam-vengeance",
     "youtubeEmbed": "https://www.youtube.com/embed/ja_1Ps57rOs"
   },
+  {
+    "catalogNumber": "PZ003",
+    "slug": "electric-whispers",
+    "title": "ELECTRIC WHISPERS",
+    "artist": "Arax",
+    "fullArtists": "Arax",
+    "date": "12/06/2026",
+    "image": "/images/releases/ew.png",
+    "video": "/videos/ew.mp4",
+    "description": "Coming Soon",
+    "links": {
+      "spotify": "https://open.spotify.com/album/3v9rkwMzRHLE4NHoArlQFH?si=nGHAtxGxQROobqT5b7VdaA",
+      "soundcloud": "https://soundcloud.com/protocolzeromusic/arax-electric-whispers",
+      "youtube": "https://www.youtube.com/watch?v=NnIGNMgiht4",
+      "freeDownload": ""
+    },
+    "spotifyEmbed": "spotify:album:3v9rkwMzRHLE4NHoArlQFH?si=nGHAtxGxQROobqT5b7VdaA",
+    "soundcloudEmbed": "https://soundcloud.com/protocolzeromusic/arax-electric-whispers",
+     "youtubeEmbed": "https://www.youtube.com/embed/NnIGNMgiht4"
+    },
     {
-      "catalogNumber": "PZ003",
-      "slug": "electric-whispers",
-      "title": "ELECTRIC WHISPERS",
-      "artist": "Arax",
-      "fullArtists": "Arax",
-      "date": "12/06/2026",
-      "image": "/images/releases/ew.png",
-      "video": "/videos/ew.mp4",
-      "description": "Coming Soon",
-      "links": {
-        "spotify": "https://open.spotify.com/album/3v9rkwMzRHLE4NHoArlQFH?si=nGHAtxGxQROobqT5b7VdaA",
-        "soundcloud": "https://soundcloud.com/protocolzeromusic/arax-electric-whispers",
-        "youtube": "https://www.youtube.com/watch?v=NnIGNMgiht4",
-        "freeDownload": ""
-      },
-      "spotifyEmbed": "spotify:album:3v9rkwMzRHLE4NHoArlQFH?si=nGHAtxGxQROobqT5b7VdaA",
-      "soundcloudEmbed": "https://soundcloud.com/protocolzeromusic/arax-electric-whispers",
-      "youtubeEmbed": "https://www.youtube.com/embed/NnIGNMgiht4"
+    "catalogNumber": "PZ004",
+    "slug": "command",
+    "title": "COMMAND",
+    "artist": "Ominate",
+    "fullArtists": "Ominate",
+    "date": "11/07/2026",
+    "image": "/images/releases/command.png",
+    "video": "/videos/command.mp4",
+    "description": "Coming Soon",
+    "links": {
+      "spotify": "https://open.spotify.com/track/0qKPytyXwrjTANYItG4JZd?si=f0f8e37f7a7846b8",
+      "soundcloud": "https://soundcloud.com/protocolzeromusic/ominate-command",
+      "youtube": "https://www.youtube.com/watch?v=4Ly31DqnoAo",
+      "freeDownload": ""
+    },
+    "spotifyEmbed": "spotify:track:0qKPytyXwrjTANYItG4JZd?si=f0f8e37f7a7846b8",
+    "soundcloudEmbed": "https://soundcloud.com/protocolzeromusic/ominate-command",
+     "youtubeEmbed": "https://www.youtube.com/embed/4Ly31DqnoAo"
     }
-
 ]
