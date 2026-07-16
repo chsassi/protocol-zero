@@ -17,10 +17,11 @@ const description =
     ? brief
     : `Artist profile: ${artist.name} — Protocol Zero drum & bass and neurofunk label`;
 
-type LinkKey = 'instagram' | 'spotify' | 'soundcloud';
+type LinkKey = 'instagram' | 'spotify' | 'appleMusic' | 'soundcloud';
 const socialLinks: { key: LinkKey; icon: string; alt: string }[] = [
   { key: 'instagram', icon: '/images/icons/instagram.svg', alt: 'Instagram' },
   { key: 'spotify', icon: '/images/icons/spotify.svg', alt: 'Spotify' },
+  { key: 'appleMusic', icon: '/images/icons/apple-music.svg', alt: 'Apple Music' },
   { key: 'soundcloud', icon: '/images/icons/soundcloud.svg', alt: 'SoundCloud' },
 ];
 ---
