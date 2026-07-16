@@ -12,22 +12,22 @@ const closeBtn = document.querySelector('.fullscreen-menu-close');
 const fullscreenMenu = document.querySelector('.fullscreen-menu');
 const navLinks = fullscreenMenu?.querySelectorAll('a');
 
-// Show header immediately on subpages (no hero section)
+// On home, start with a transparent hamburger-only header and reveal the full
+// dark header after scrolling. Subpages always show the complete header.
 const isHomePage = document.querySelector('.hero-slideshow') !== null;
 
-if (!isHomePage && header) {
-  header.classList.add('is-visible');
-}
+header?.classList.add('is-visible');
 
-window.addEventListener(
-  'scroll',
-  () => {
-    if (isHomePage) {
-      header?.classList.toggle('is-visible', window.scrollY > 100);
-    }
-  },
-  { passive: true }
-);
+if (isHomePage) {
+  header?.classList.add('is-home');
+
+  const updateHomeHeader = () => {
+    header?.classList.toggle('is-scrolled', window.scrollY > 100);
+  };
+
+  updateHomeHeader();
+  window.addEventListener('scroll', updateHomeHeader, { passive: true });
+}
 
 // Fullscreen menu functions
 let scrollPosition = 0;

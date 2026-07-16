@@ -14,7 +14,7 @@ import news from "../data/news.json";
   canonical="https://protocolzero.online/"
   active=""
 >
-  <h1 class="sr-only">Protocol Zero — European Drum &amp; Bass and Neurofunk Label</h1>
+  <h1 class="sr-only">Protocol Zero — Drum &amp; Bass and Neurofunk Label</h1>
 
   <div id="page-loader" class="page-loader" aria-hidden="true">
     <img src="/images/logo.svg" alt="Protocol Zero" class="loader-logo" />
@@ -47,7 +47,12 @@ import news from "../data/news.json";
                 <span class="news-type-label">{item.title}</span>
                 <h1 class="news-heading">{item.heading}</h1>
                 <p class="news-description">{item.description}</p>
-                <a href={item.link} class="news-link">{item.linkText}</a>
+                <a
+                  href={item.link}
+                  class="news-link"
+                  target={item.link.startsWith('http') ? '_blank' : undefined}
+                  rel={item.link.startsWith('http') ? 'noopener noreferrer' : undefined}
+                >{item.linkText}</a>
               </div>
               <nav class="hero-menu"></nav>
             </div>
@@ -76,7 +81,7 @@ import news from "../data/news.json";
     <section id="about" class="scroll-section about-section">
       <h1>ABOUT</h1>
       <div class="section-content">
-        <p>Protocol Zero (P0) is an independent European drum & bass label founded between Slovakia and Italy by The Martens and Chr-s.</p>
+        <p>Protocol Zero (P0) is an independent European drum & bass label founded between Slovakia and Italy.</p>
         <p>Born from a shared vision of sound as both art and technology, the label focuses on the darker and more technical edges of drum & bass — from deep neurofunk to atmospheric techstep.</p>
         <p>P0 aims to connect European underground scenes through a unified aesthetic: precise sound design, immersive basslines, and a strong visual and conceptual identity.</p>
         <p>Born from a deep passion for dark and energetic drum & bass, the label stands for quality, precision and evolution in sound.</p>

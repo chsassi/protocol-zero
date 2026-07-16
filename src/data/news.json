@@ -11,13 +11,13 @@
   },
   {
     "id": 2,
-    "type": "artist",
-    "title": "NEW ARTIST",
-    "heading": "LED.",
-    "description": "Introducing our latest addition to the Protocol Zero family",
-    "image": "/images/artists/led-blur.jpg",
-    "link": "/#artists",
-    "linkText": "BROWSE ARTISTS"
+    "type": "playlist",
+    "title": "SPOTIFY PLAYLIST",
+    "heading": "NEUROFUNK | BEST OF",
+    "description": "Save this playlist with the best Neurofunk from all over the world",
+    "image": "/images/playlists/playlist.jpg",
+    "link": "https://open.spotify.com/playlist/79xxn9IepLlyeuaVjHfEjo",
+    "linkText": "SAVE PLAYLIST"
   },
   {
     "id": 3,

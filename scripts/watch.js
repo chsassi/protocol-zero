@@ -35,9 +35,12 @@ console.log(`  Scripts: ${SCRIPT_SOURCE}/*.extended.ts`);
 console.log('\nPress Ctrl+C to stop.\n');
 
 // Watch SCSS files
-const scssWatcher = chokidar.watch(`${SCSS_SOURCE}/**/*.scss`, {
+const scssWatcher = chokidar.watch(SCSS_SOURCE, {
   persistent: true,
   ignoreInitial: true,
+  usePolling: true,
+  interval: 250,
+  ignored: (filepath, stats) => stats?.isFile() && !filepath.endsWith('.scss'),
   awaitWriteFinish: {
     stabilityThreshold: 100,
     pollInterval: 50
@@ -59,9 +62,13 @@ scssWatcher.on('change', handleSCSSChange);
 scssWatcher.on('add', handleSCSSChange);
 
 // Watch CSS files (for backward compatibility)
-const cssWatcher = chokidar.watch(`${CSS_SOURCE}/*.extended.css`, {
+const cssWatcher = chokidar.watch(CSS_SOURCE, {
   persistent: true,
   ignoreInitial: true,
+  usePolling: true,
+  interval: 250,
+  depth: 0,
+  ignored: (filepath, stats) => stats?.isFile() && !filepath.endsWith('.extended.css'),
   awaitWriteFinish: {
     stabilityThreshold: 100,
     pollInterval: 50
@@ -82,9 +89,13 @@ cssWatcher.on('change', handleCSSChange);
 cssWatcher.on('add', handleCSSChange);
 
 // Watch TypeScript files
-const scriptWatcher = chokidar.watch(`${SCRIPT_SOURCE}/*.extended.ts`, {
+const scriptWatcher = chokidar.watch(SCRIPT_SOURCE, {
   persistent: true,
   ignoreInitial: true,
+  usePolling: true,
+  interval: 250,
+  depth: 0,
+  ignored: (filepath, stats) => stats?.isFile() && !filepath.endsWith('.extended.ts'),
   awaitWriteFinish: {
     stabilityThreshold: 100,
     pollInterval: 50
