@@ -6,7 +6,6 @@ import CookieConsent from "../components/ui/CookieConsent.astro";
 import artists from "../data/artists.json";
 import releases from "../data/releases.json";
 import news from "../data/news.json";
-// import mixes from "../data/mixes.json";
 ---
 
 <HeaderLayout
@@ -91,7 +90,7 @@ import news from "../data/news.json";
     <ContentSlideshow
       id="artists"
       type="artist"
-      variant="image-left"
+      variant="image-right"
       items={artists.map(a => ({ image: a.image, title: a.name, slug: a.slug }))}
       sectionTitle="ARTISTS"
       maxItems={5}
@@ -115,16 +114,6 @@ import news from "../data/news.json";
       maxItems={5}
     />
 
-    {/* Mixes section: keep commented until it is ready to be published.
-    <ContentSlideshow
-      id="mixes"
-      type="mix"
-      variant="image-left"
-      items={mixes.map(m => ({ image: m.image, title: m.title, subtitle: m.artist, slug: m.slug }))}
-      sectionTitle="MIXES"
-      maxItems={5}
-    />
-    */}
   </div>
 
   <CookieConsent />

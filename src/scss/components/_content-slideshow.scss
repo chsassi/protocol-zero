@@ -67,7 +67,7 @@
 // Base layout
 .content-slide-layout {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
   gap: 60px;
   padding: 240px map.get($spacing, '3xl') 0;
@@ -90,26 +90,20 @@
   }
 }
 
-// IMAGE LEFT variant (image first, centered content on the right)
+// IMAGE LEFT variant (image first, content right, text LEFT-aligned)
 .content-slide-layout--image-left {
   .content-slide-content {
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
   }
 
   .content-slide-info {
-    align-items: center;
-    text-align: center;
+    align-items: flex-start;
+    text-align: left;
   }
 
   .content-slide-link {
-    left: 50%;
+    left: 0;
     right: auto;
-    transform: translate(-50%, -10px);
-  }
-
-  .content-slide-info:hover .content-slide-link {
-    transform: translate(-50%, 0);
   }
 
   @include respond-to('lg') {
@@ -123,7 +117,7 @@
     }
 
     .content-slide-link {
-      left: 50%;
+      left: auto;
       right: auto;
     }
   }
