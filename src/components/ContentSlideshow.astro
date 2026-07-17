@@ -13,19 +13,21 @@ interface SlideItem {
 
 interface Props {
   id: string;
-  type: "artist" | "release";
+  type: "artist" | "release" | "mix";
   variant: "image-left" | "image-right";
   items: SlideItem[];
   sectionTitle: string;
   contentPosition?: "above" | "below";
+  maxItems?: number;
 }
 
-const { id, type, variant, items, sectionTitle, contentPosition } = Astro.props;
-const linkText = type === "artist" ? "VIEW ARTIST" : "VIEW RELEASE";
-const linkBase = type === "artist" ? "/artists/" : "/releases#";
+const { id, type, variant, items, sectionTitle, contentPosition, maxItems } = Astro.props;
+const linkText = type === "artist" ? "VIEW ARTIST" : type === "mix" ? "VIEW MIX" : "VIEW RELEASE";
+const linkBase = type === "artist" ? "/artists/" : type === "mix" ? "/mixes#" : "/releases#";
+const sectionClass = type === "mix" ? "mixes-section" : `${type}s-section`;
 ---
 
-<section id={id} class={`scroll-section ${type}s-section content-slideshow`}>
+<section id={id} class={`scroll-section ${sectionClass} content-slideshow`} data-max-items={maxItems}>
   <div class="content-slide-bg-blur" style={`background-image: url(${items[0].image})`}></div>
   <div class="section-vignette"></div>
 

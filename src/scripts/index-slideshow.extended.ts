@@ -9,6 +9,52 @@
 const SWIPE_THRESHOLD = 50;       // Minimum px for valid swipe
 const SWIPE_ANGLE_THRESHOLD = 30; // Max degrees from horizontal
 
+function limitSlideshowItems(
+  container: string,
+  slide: string,
+  indicator: string
+) {
+  const el = document.querySelector<HTMLElement>(container);
+  const maxItems = Number.parseInt(el?.dataset.maxItems || '', 10);
+  const slides = Array.from(el?.querySelectorAll(slide) || []);
+  const indicators = Array.from(el?.querySelectorAll(indicator) || []);
+
+  if (!el || !Number.isFinite(maxItems) || maxItems < 1 || slides.length <= maxItems) {
+    return;
+  }
+
+  const shuffledIndexes = slides.map((_, index) => index);
+  for (let i = shuffledIndexes.length - 1; i > 0; i--) {
+    const randomIndex = Math.floor(Math.random() * (i + 1));
+    [shuffledIndexes[i], shuffledIndexes[randomIndex]] = [
+      shuffledIndexes[randomIndex],
+      shuffledIndexes[i],
+    ];
+  }
+
+  const selectedIndexes = new Set(shuffledIndexes.slice(0, maxItems));
+
+  slides.forEach((item, index) => {
+    if (!selectedIndexes.has(index)) item.remove();
+  });
+  indicators.forEach((item, index) => {
+    if (!selectedIndexes.has(index)) item.remove();
+  });
+
+  const remainingSlides = Array.from(el.querySelectorAll(slide));
+  const remainingIndicators = Array.from(el.querySelectorAll(indicator));
+
+  remainingSlides.forEach((item, index) => {
+    item.setAttribute('data-slide', String(index));
+    item.classList.toggle('is-active', index === 0);
+  });
+  remainingIndicators.forEach((item, index) => {
+    item.setAttribute('data-slide', String(index));
+    item.setAttribute('aria-label', `Go to slide ${index + 1}`);
+    item.classList.toggle('is-active', index === 0);
+  });
+}
+
 function createSlideshow(
   container: string,
   slide: string,
@@ -18,6 +64,8 @@ function createSlideshow(
   interval = 5000,
   bgBlur?: string
 ) {
+  limitSlideshowItems(container, slide, indicator);
+
   let idx = 0;
   const el = document.querySelector(container);
   const slides = Array.from(el?.querySelectorAll(slide) || []);

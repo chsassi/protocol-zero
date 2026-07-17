@@ -264,8 +264,11 @@
 
 .release-expanded-icons {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 15px;
   align-self: center;
+  width: min(100%, 162px);
 
   a {
     display: flex;
@@ -307,8 +310,8 @@
   }
 
   @include respond-to('md') {
-    justify-content: center;
     gap: 16px;
+    width: min(100%, 164px);
     padding-top: map.get($spacing, 'md');
   }
 }

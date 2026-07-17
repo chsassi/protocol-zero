@@ -6,16 +6,16 @@ import CookieConsent from "../components/ui/CookieConsent.astro";
 import artists from "../data/artists.json";
 import releases from "../data/releases.json";
 import news from "../data/news.json";
+// import mixes from "../data/mixes.json";
 ---
 
 <HeaderLayout
   title="Protocol Zero - Drum & Bass Label"
   description="Independent European drum & bass label focused on neurofunk and dark bass music."
   canonical="https://protocolzero.online/"
-  active=""
->
-  <h1 class="sr-only">Protocol Zero — Drum &amp; Bass and Neurofunk Label</h1>
+  active="">
 
+  <h1 class="sr-only">Protocol Zero — Drum &amp; Bass and Neurofunk Label</h1>
   <div id="page-loader" class="page-loader" aria-hidden="true">
     <img src="/images/logo.svg" alt="Protocol Zero" class="loader-logo" />
   </div>
@@ -91,9 +91,10 @@ import news from "../data/news.json";
     <ContentSlideshow
       id="artists"
       type="artist"
-      variant="image-right"
+      variant="image-left"
       items={artists.map(a => ({ image: a.image, title: a.name, slug: a.slug }))}
       sectionTitle="ARTISTS"
+      maxItems={5}
     />
 
     <section id="contacts" class="scroll-section contacts-section">
@@ -111,12 +112,23 @@ import news from "../data/news.json";
       variant="image-left"
       items={releases.map(r => ({ image: r.image, title: r.title, subtitle: r.artist, slug: r.slug }))}
       sectionTitle="RELEASES"
+      maxItems={5}
     />
+
+    {/* Mixes section: keep commented until it is ready to be published.
+    <ContentSlideshow
+      id="mixes"
+      type="mix"
+      variant="image-left"
+      items={mixes.map(m => ({ image: m.image, title: m.title, subtitle: m.artist, slug: m.slug }))}
+      sectionTitle="MIXES"
+      maxItems={5}
+    />
+    */}
   </div>
 
   <CookieConsent />
 
-  <script src="/scripts/index-slideshow.min.js" is:inline></script>
   <script src="/scripts/index-slideshow.min.js" is:inline></script>
   <script src="/scripts/cookie-consent.min.js" is:inline></script>
 </HeaderLayout>
